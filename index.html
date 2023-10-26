@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tabbed Component</title>
+  </head>
+
+  <body>
+    <div class="main">
+      <h1 class="main-title">Stuff you can do in Minecraft</h1>
+      <div class="static-div">
+        <div class="tabs-container">
+          <button class="btn tab-btn tab-btn-1" data-tab="1">
+            <span>One</span>
+          </button>
+
+          <button class="btn tab-btn tab-btn-2" data-tab="2">
+            <span>Two</span>
+          </button>
+
+          <button class="btn tab-btn tab-btn-3" data-tab="3">
+            <span>Three</span>
+          </button>
+        </div>
+
+        <div class="content content__1 content-active">
+          <div>
+            <ion-icon name="walk-outline" class="content-icon"></ion-icon>
+          </div>
+
+          <h3 class="content-title">
+            Explore a plethora of biomes in a vast world!
+          </h3>
+          <p class="content-text">
+            Use your own two feet to walk and run across plains and over
+            mountains. Craft a boat to sail the waters or tame a horse to ride
+            instead. Find a biome that suits your style and make it your own.
+          </p>
+        </div>
+      </div>
+
+      <div class="content content__2 content-hidden">
+        <div>
+          <ion-icon name="home-outline" class="content-icon"></ion-icon>
+        </div>
+
+        <h3 class="content-title">Build and create structures!</h3>
+        <p class="content-text">
+          Block by block you can collect and build anything you can imagine.
+          Towering pylons reaching to the limits of the sky, underground cave
+          systems with long hallways leading into every direction through water
+          and lava lakes. Build a home or build a city!
+        </p>
+      </div>
+
+      <div class="content content__3 content-hidden">
+        <div>
+          <ion-icon name="diamond-outline" class="content-icon"></ion-icon>
+        </div>
+
+        <h3 class="content-title">Find diamonds!</h3>
+        <p class="content-text">
+          You can find diamonds around level -53, so grab a few pickaxes and
+          work your way to the lower levels or find a giant cave! With diamonds
+          you can craft excellent armor and tools.
+        </p>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
