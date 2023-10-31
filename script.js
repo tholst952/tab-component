@@ -1,20 +1,34 @@
-"use strict";
+'use strict';
 
-const tabs = document.querySelectorAll(".tab-btn");
-const tabsContainer = document.querySelector(".tabs-container");
+const tabs = document.querySelectorAll('.tab-btn');
+const tabsContainer = document.querySelector('.tabs-container');
+const allContent = document.querySelectorAll('.content');
 
-tabsContainer.addEventListener("click", function (e) {
-  const clicked = e.target.closest(".tab-btn");
-  console.log(clicked.dataset.tab);
+tabsContainer.addEventListener('click', function (e) {
+  const clicked = e.target.closest('.tab-btn');
+  const tabNumber = clicked.dataset.tab;
+  console.log(tabNumber);
 
   //Guard clause
   if (!clicked) return;
 
-  // remove the active class from all tabs
-  if (clicked) tabs.forEach((tab) => tab.classList.remove("tab-btn-1-active"));
-  clicked.classList.add(`tab-btn-1-active`);
-  // add the active class
+  // remove the active classes from tabs & content
+  if (clicked)
+    tabs.forEach(tab => tab.classList.remove(`tab-btn-${tabNumber}-active`));
+  allContent.forEach(c => c.classList.remove(`content-active`));
+
+  // activate tab
+  clicked.classList.add(`tab-btn-${tabNumber}-active`);
+
+  // add the active class to tab
   document
-    .querySelector(`.tab-btn-${clicked.dataset.tab}`)
-    .classList.add("tab-btn-1-active");
+    .querySelector(`.tab-btn-${tabNumber}`)
+    .classList.add(`tab-btn-${tabNumber}-active`);
+
+  // show the active tab's content
+
+  const content = document.querySelector(`.content__${tabNumber}`);
+  content.classList.add(`content-active`);
+  content.classList.remove(`content-hidden`);
+  // content.classList.add(`content__${tabNumber}`);
 });

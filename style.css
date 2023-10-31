@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 * {
   padding: 0;
@@ -21,7 +21,7 @@ html {
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   color: #444;
   background-color: #acd368;
 }
@@ -90,11 +90,11 @@ h1 {
 }
 
 /* The Content */
-.content-active {
-  position: relative;
+.content {
+  display: none;
 }
 
-.content {
+.content-active {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -106,6 +106,7 @@ h1 {
   justify-items: center;
   align-items: center;
   border-radius: 0.5rem;
+  position: relative;
 }
 
 .content-icon {
@@ -119,8 +120,4 @@ h1 {
 .content-text {
   grid-column: 2;
   line-height: 1.5;
-}
-
-.content-hidden {
-  display: none;
 }
